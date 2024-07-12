@@ -1,0 +1,72 @@
+// 全局变量
+@use './utils.scss' as *;
+.box {
+  border: vh(1) solid rgba(7, 118, 181, 0.5);
+  box-shadow: inset 0 0 vh(10) rgba(7, 118, 181, 0.4);
+  margin-bottom: vh(14);
+  position: relative;
+  .tit {
+    padding: vh(10) vw(10) vh(10) vw(25);
+    border-bottom: vh(1) solid rgba(7, 118, 181, 0.7);
+    font-size: vh(20);
+    font-weight: 900;
+    position: relative;
+  }
+}
+.tit:before,
+.tit01:before {
+  position: absolute;
+  content: "";
+  width: vw(6);
+  height: vw(6);
+  background: rgba(22, 214, 255, 0.9);
+  box-shadow: 0 0 vh(5) rgba(22, 214, 255, 0.9);
+  border-radius: 50%;
+  left: vw(10);
+  top: vh(18);
+}
+.tit:after,
+.box:before {
+  width: 100%;
+  height: vh(1);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: vh(-1);
+  background: linear-gradient(to right, #076ead, #4ba6e0, #076ead);
+  box-shadow: 0 0 vw(5) rgba(131, 189, 227, 1);
+  opacity: 0.6;
+}
+.box:before {
+  top: vh(-1);
+}
+.table1{
+  th {
+    border-bottom: vw(1) solid #407abd;
+    font-size: vh(16);
+    text-align: center;
+    padding: vh(6) 0;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  td {
+    border-bottom: vw(1) dotted#407abd;
+    font-size: vh(14);
+    padding: vh(6) 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  tr {
+    &:last-child {
+      td {
+        border: none;
+      }
+    }
+  }
+}
+
+.el-popper {
+  --el-bg-color-overlay: rgba(3,47,136,0.6);
+  --el-border-color-light: rgba(7, 118, 181, 0.7);
+  --el-text-color-regular: #fff;
+  --el-fill-color-light: rgba(7, 118, 181)
+}
